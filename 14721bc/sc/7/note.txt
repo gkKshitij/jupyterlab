@@ -1,0 +1,13 @@
+Genetic algorithm is meant for bigger population that is bigger numbers, in this case as the number of chromosomes is very small(5) the possible population is only 2^5=32 for binary chromosome.
+
+And the reason is same for the graph being more like step function rather than exponentially incremental cause it doesnt get the required range to perform, before which the solution is found.
+
+The worst possible case in this is if the mutation is not controlled, which is usually not done to prevent stagnation of fitness there is a risk of fitness going drastically down as even changing 1 chromosome(variable) will affect 20% of fitness and may even lead to forever loop or very long processes of finding the fittest one.
+
+So manually picking the population is recommended else the probability of the solution/reference being in the population is very high which will have highest fittness and ofcourse is always gonna win against others.
+
+In this case i didnt do it but instead i ran the random function until I got a population without the solution. In real world problem it is not recommended and infact is not even possible.
+
+Ideal case is when the number of possible solutions is greater than 10^3 and poulation size is anywhere between 50-500.
+50 if designing graphic intensive application on moderate pc,
+500 for any simple binary operations like this.
